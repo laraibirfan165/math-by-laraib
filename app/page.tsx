@@ -1,4 +1,6 @@
+import FeaturedCourses from "@/components/FeaturedCourses";
 import Navbar from "@/components/Navbar";
+import PracticeCategories from "@/components/PracticeCategories";
 import WhyChoose from "@/components/WhyChoose";
 
 const stats = [
@@ -32,12 +34,12 @@ export default function Home() {
 
         <section className="relative mx-auto flex max-w-7xl flex-col items-center gap-16 px-6 py-16 sm:py-20 lg:flex-row lg:items-center lg:gap-12 lg:py-24 xl:px-8">
           <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/80 px-4 py-1.5 text-sm font-medium text-blue-700 shadow-sm backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/80 px-4 py-1.5 text-sm font-medium tracking-[-0.01em] text-blue-700 shadow-sm backdrop-blur-sm">
               <span className="inline-flex h-2 w-2 rounded-full bg-blue-600" />
               Mathematics by Laraib Punjwani
             </div>
 
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-slate-900 sm:text-5xl lg:text-6xl">
               Crack Your{" "}
               <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 bg-clip-text text-transparent">
                 ECAT, NTS & Board Exams
@@ -45,17 +47,17 @@ export default function Home() {
               with Confidence
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:mx-0">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.7] tracking-[-0.01em] text-slate-600 sm:text-lg lg:mx-0">
               Practice thousands of high-quality Mathematics MCQs, attempt mock
               tests, track your progress and improve your score.
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <button className="group relative w-full overflow-hidden rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-700 hover:shadow-blue-600/35 sm:w-auto">
+              <button className="group relative w-full overflow-hidden rounded-xl bg-blue-600 px-8 py-4 text-[0.9375rem] font-semibold tracking-[-0.01em] text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-700 hover:shadow-blue-600/35 sm:w-auto">
                 <span className="relative z-10">Start Free Practice</span>
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition group-hover:translate-x-full duration-700" />
               </button>
-              <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-blue-200 bg-white px-8 py-4 text-base font-semibold text-blue-700 shadow-sm transition hover:border-blue-300 hover:bg-blue-50 sm:w-auto">
+              <button className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-blue-200 bg-white px-8 py-4 text-[0.9375rem] font-semibold tracking-[-0.01em] text-blue-700 shadow-sm transition hover:border-blue-300 hover:bg-blue-50 sm:w-auto">
                 <svg
                   aria-hidden
                   className="h-5 w-5"
@@ -74,10 +76,10 @@ export default function Home() {
                   key={stat.label}
                   className="rounded-2xl border border-blue-100/80 bg-white/70 px-6 py-5 shadow-sm backdrop-blur-sm transition hover:border-blue-200 hover:shadow-md"
                 >
-                  <p className="text-3xl font-bold tracking-tight text-blue-600 sm:text-4xl">
+                  <p className="text-3xl font-semibold tabular-nums tracking-[-0.02em] text-blue-600 sm:text-4xl">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-sm font-medium text-slate-500">
+                  <p className="mt-1 text-sm font-medium tracking-[-0.008em] text-slate-500">
                     {stat.label}
                   </p>
                 </div>
@@ -92,26 +94,30 @@ export default function Home() {
 
               <div className="relative flex h-full flex-col justify-between p-8 text-white">
                 <div>
-                  <p className="text-sm font-medium text-blue-100">
+                  <p className="text-sm font-medium tracking-[-0.01em] text-blue-100">
                     Live Progress
                   </p>
-                  <p className="mt-1 text-2xl font-bold">Your Score: 87%</p>
+                  <p className="mt-1 text-2xl font-semibold tracking-[-0.02em]">
+                    Your Score: 87%
+                  </p>
                 </div>
 
-                <div className="space-y-3 font-mono text-sm">
+                <div className="space-y-3 text-sm tracking-[-0.008em]">
                   <div className="rounded-xl bg-white/10 px-4 py-3 backdrop-blur-sm">
                     <p className="text-blue-100">∫ x² dx = ?</p>
-                    <p className="mt-1 font-semibold text-white">
+                    <p className="mt-1 font-semibold tracking-[-0.01em] text-white">
                       x³/3 + C ✓
                     </p>
                   </div>
                   <div className="rounded-xl bg-white/10 px-4 py-3 backdrop-blur-sm">
                     <p className="text-blue-100">lim (sin x / x) as x→0</p>
-                    <p className="mt-1 font-semibold text-white">= 1 ✓</p>
+                    <p className="mt-1 font-semibold tracking-[-0.01em] text-white">
+                      = 1 ✓
+                    </p>
                   </div>
                   <div className="rounded-xl bg-white/10 px-4 py-3 backdrop-blur-sm">
                     <p className="text-blue-100">det | 2  1 |</p>
-                    <p className="mt-1 pl-6 font-semibold text-white">
+                    <p className="mt-1 pl-6 font-semibold tracking-[-0.01em] text-white">
                       | 3  4 | = 5 ✓
                     </p>
                   </div>
@@ -121,24 +127,32 @@ export default function Home() {
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/20">
                     <div className="h-full w-[87%] rounded-full bg-white" />
                   </div>
-                  <span className="text-sm font-semibold">87%</span>
+                  <span className="text-sm font-semibold tabular-nums tracking-[-0.01em]">
+                    87%
+                  </span>
                 </div>
               </div>
 
               <div className="absolute -top-4 -right-4 rounded-2xl border border-blue-100 bg-white px-4 py-3 shadow-lg">
-                <p className="text-xs font-medium text-slate-500">Accuracy</p>
-                <p className="text-lg font-bold text-blue-600">94%</p>
+                <p className="text-xs font-medium tracking-[0.04em] text-slate-500 uppercase">
+                  Accuracy
+                </p>
+                <p className="text-lg font-semibold tabular-nums tracking-[-0.02em] text-blue-600">
+                  94%
+                </p>
               </div>
               <div className="absolute -bottom-4 -left-4 rounded-2xl border border-blue-100 bg-white px-4 py-3 shadow-lg">
-                <p className="text-xs font-medium text-slate-500">Streak</p>
-                <p className="text-lg font-bold text-blue-600">12 days</p>
+                <p className="text-xs font-medium tracking-[0.04em] text-slate-500 uppercase">
+                  Streak
+                </p>
+                <p className="text-lg font-semibold tracking-[-0.02em] text-blue-600">12 days</p>
               </div>
             </div>
           </div>
         </section>
 
         <div className="relative border-t border-blue-100 bg-blue-50/50">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 py-6 text-sm text-slate-600">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 py-6 text-sm font-medium tracking-[-0.008em] text-slate-600">
             <span className="inline-flex items-center gap-2">
               <svg
                 aria-hidden
@@ -211,6 +225,8 @@ export default function Home() {
         </div>
 
         <WhyChoose />
+        <FeaturedCourses />
+        <PracticeCategories />
       </main>
     </>
   );

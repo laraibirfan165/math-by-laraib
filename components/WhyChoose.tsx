@@ -52,13 +52,13 @@ export default function WhyChoose() {
     <section className="bg-white px-6 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-blue-600 sm:text-sm">
             Why Choose Us
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold leading-[1.15] tracking-[-0.025em] text-slate-900 sm:text-4xl">
             Why Choose Mathematics by Laraib?
           </h2>
-          <p className="mt-4 text-lg text-slate-600">
+          <p className="mt-4 text-base leading-[1.7] tracking-[-0.01em] text-slate-600 sm:text-lg">
             Everything you need to master Mathematics and ace your exams — all
             in one place.
           </p>
@@ -77,10 +77,10 @@ export default function WhyChoose() {
                   <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-colors group-hover/card:bg-blue-100">
                     <Icon className="h-6 w-6" strokeWidth={2} />
                   </div>
-                  <CardTitle className="text-lg font-bold text-slate-900">
+                  <CardTitle className="text-lg font-semibold tracking-[-0.02em] text-slate-900">
                     {feature.title}
                   </CardTitle>
-                  <CardDescription className="text-base leading-relaxed text-slate-600">
+                  <CardDescription className="text-[0.9375rem] leading-[1.65] tracking-[-0.008em] text-slate-600">
                     {feature.description}
                   </CardDescription>
                 </CardHeader>
