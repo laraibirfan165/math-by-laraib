@@ -20,9 +20,6 @@ export default function Navbar() {
             Courses
           </a>
           <a className="transition-colors hover:text-blue-700" href="#">
-            Pricing
-          </a>
-          <a className="transition-colors hover:text-blue-700" href="#">
             About
           </a>
         </div>

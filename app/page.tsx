@@ -1,3 +1,5 @@
+
+import Testimonials from "@/components/Testimonials";
 import FeaturedCourses from "@/components/FeaturedCourses";
 import Navbar from "@/components/Navbar";
 import PracticeCategories from "@/components/PracticeCategories";
@@ -227,6 +229,8 @@ export default function Home() {
         <WhyChoose />
         <FeaturedCourses />
         <PracticeCategories />
+        <Testimonials />
+        
       </main>
     </>
   );
